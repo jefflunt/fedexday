@@ -1,0 +1,6 @@
+New comment:
+=form_for @new_comment do |f|
+  =f.hidden_field :post_id
+  =f.text_area :body, :size => "50x10"
+  %br
+  =f.submit

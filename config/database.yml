@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  database: fedexday_development
+  username: fedexday
+  password: fedexday
+
+test: &TEST
+  adapter: postgresql
+  database: fedexday_test
+  username: fedexday
+  password: fedexday
+
+cucumber:
+  <<: *TEST
+
+production:
+  adapter: postgresql
+  database: fedexday_prod
+  username: fedexday
+  password: fedexday
+  
