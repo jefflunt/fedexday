@@ -2,7 +2,7 @@ Write a brief outline of your idea.
 =form_for(@idea) do |f|
   -if @idea.errors.any?
     #error_explanation
-      %h2=pluralize(@idea.errors.count, "error") + "prohibited this idea from being saved:"
+      %h2=pluralize(@idea.errors.count, "error") + " prohibited this idea from being saved:"
 
       %ul
         -@idea.errors.full_messages.each do |msg|

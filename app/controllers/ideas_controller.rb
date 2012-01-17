@@ -70,4 +70,13 @@ class IdeasController < ApplicationController
       end
     end
   end
+  
+  # PUT /ideas/1/scratch
+  # Allows to "scratch/unscratch" an idea, which doesn't destroy it, but will mark/unmark an idea as "scratched out"
+  def scratch
+    @idea = Idea.find(params[:id])
+    
+    @idea.update_attribute(:scratched, !@idea.scratched)
+    redirect_to :back
+  end
 end
