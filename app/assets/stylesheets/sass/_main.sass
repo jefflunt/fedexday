@@ -18,6 +18,31 @@ h3
     family: $font-serif
     size: $size-medium
 
+/* composite font style classes */
+
+.title-text
+  a
+    color: $color-dark-gray
+    &:hover
+      color: $color-dark-gray
+.title-head
+  font:
+    family: $font-title
+    size: $size-huge
+.title-subhead
+  font:
+    family: $font-serif
+    size: $size-large
+
+.idea-title
+  font:
+    family: $font-serif
+    size: $size-huge
+.idea-text
+  font:
+    family: $font-sans
+    size: $size-medium
+
 /* table styling */
 
 .compact-table
@@ -48,9 +73,28 @@ h3
       
 /* special divs */
 
+.title-image
+  float: left
 .min-width-920
   min-width: 920px
 .content-wrapper
+  position: relative
   font:
     family: $font-sans
     size: $size-medium
+  .page-content-wrapper
+    position: relative
+
+#idea
+  background: $color-light-gray
+  padding: 5px
+  border-radius: 10px
+  width: 75%
+  min-height: 200px
+#endorsements
+  width: 20%
+  position: absolute
+  top: 0px
+  right: 0px
+#comments
+  width: 33%

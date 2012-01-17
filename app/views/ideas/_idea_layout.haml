@@ -1,0 +1,4 @@
+%span{:class=>'idea-title'}
+  =@idea.title
+=link_to 'edit', edit_idea_path(@idea)
+%p{:class=>'idea-text'}=simple_format @idea.body

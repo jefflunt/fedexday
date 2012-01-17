@@ -1,6 +1,6 @@
-New comment:
+%b="New comment"
 =form_for @new_comment do |f|
   =f.hidden_field :idea_id
   =f.text_area :body, :size => "50x10"
   %br
-  =f.submit
+  =f.submit "Add comment"

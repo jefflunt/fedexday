@@ -2,11 +2,13 @@
 %html
   %head
     %title="Fedexday"
-    <link href='http://fonts.googleapis.com/css?family=Esteban|Ruluko' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Esteban|Ruluko|Montserrat' rel='stylesheet' type='text/css'>
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =csrf_meta_tags
   %body
     .min-width-920
       .content-wrapper
-        =yield
+        =render 'partials/header'
+        .page-content-wrapper
+          =yield

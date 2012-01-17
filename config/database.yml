@@ -1,21 +1,17 @@
 development:
-  adapter: postgresql
-  database: fedexday_development
-  username: fedexday
-  password: fedexday
+  adapter: sqlite3
+  database: db/development.sqlite3
+  timeout: 5000
 
-test: &TEST
-  adapter: postgresql
-  database: fedexday_test
-  username: fedexday
-  password: fedexday
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  timeout: 5000
 
 cucumber:
   <<: *TEST
 
 production:
-  adapter: postgresql
-  database: fedexday_prod
-  username: fedexday
-  password: fedexday
-  
+  adapter: sqlite3
+  database: db/production.sqlite3
+  timeout: 5000

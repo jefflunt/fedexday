@@ -1,14 +1,11 @@
-%h2="Comments (" + @idea.comments.count.to_s + ")"
+%br
+%br
+%h2="Comments"
+-@idea.comments.each do |c|
+  .comment-time
+    %b=time_ago_in_words(c.updated_at) + " ago"
+  .comment-text
+    =c.body
+    %br
+    %br
 =render 'comment_form'
-%br
-%br
-%table{:width=>"300px"}
-  -@idea.comments.each do |c|
-    %tr
-      %td
-        %b=time_ago_in_words(c.updated_at) + " ago"
-    %tr
-      %td
-        =c.body
-        %br
-        %br

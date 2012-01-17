@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-gem 'pg'
+gem 'sqlite3'
 gem 'json'
 gem 'jquery-rails'
 gem 'haml'
