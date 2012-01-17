@@ -1,0 +1,16 @@
+%p{:id=>"notice"}=notice
+
+%h1=@idea.title
+%br
+=@idea.body
+
+%br
+%br
+=link_to('Edit', edit_idea_path(@idea)) + " |"
+=link_to 'Back', ideas_path
+%br
+%br
+#endorsements
+  =render 'endorsements_list'
+#comments
+  =render 'comments_list'

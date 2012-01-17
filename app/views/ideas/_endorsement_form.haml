@@ -1,0 +1,5 @@
+Enter your name to endorse this idea
+=form_for @new_endorsement do |f|
+  =f.hidden_field :idea_id
+  =f.text_field :name
+  =f.submit "Endorse"

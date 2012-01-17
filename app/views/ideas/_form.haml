@@ -1,0 +1,20 @@
+Write a brief outline of your idea.
+=form_for(@idea) do |f|
+  -if @idea.errors.any?
+    #error_explanation
+      %h2=pluralize(@idea.errors.count, "error") + "prohibited this idea from being saved:"
+
+      %ul
+        -@idea.errors.full_messages.each do |msg|
+          %li= msg
+  %br
+  =f.label :title
+  %br
+  =f.text_field :title
+  %br
+  %br
+  =f.label :summary
+  %br
+  =f.text_area :body
+  .actions
+    =f.submit

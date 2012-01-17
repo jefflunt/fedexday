@@ -41,9 +41,9 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.create(params[:comment])
-    @comment.post.update_attribute(:updated_at, Time.now)
+    @comment.idea.update_attribute(:updated_at, Time.now)
 
-    redirect_to @comment.post
+    redirect_to @comment.idea
   end
 
   # PUT /comments/1

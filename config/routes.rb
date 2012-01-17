@@ -1,10 +1,7 @@
 Fedexday::Application.routes.draw do
-  resources :subscriptions
-  resources :posts do
-    resources :comments
-  end
-  
+  resources :ideas
+  resources :endorsements
   resources :comments
 
-  root :to => 'posts#index'
+  root :to => 'ideas#index'
 end
