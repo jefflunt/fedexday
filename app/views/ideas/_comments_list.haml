@@ -5,7 +5,7 @@
   .comment-time
     %b=time_ago_in_words(c.updated_at) + " ago"
   .comment-text
-    =c.body
+    =simple_format(c.body)
     %br
     %br
 =render 'comment_form'
