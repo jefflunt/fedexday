@@ -1,7 +1,7 @@
 %h3="Currently endorsed by"
 -@idea.endorsements.each do |e|
+  %span=link_to "x", e, :method => :delete
   =e.name
   %br
 %br
 =render 'endorsement_form'
-
