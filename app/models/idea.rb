@@ -4,4 +4,6 @@ class Idea < ActiveRecord::Base
   
   validates :title, :presence => true
   validates :body, :presence => true
+  
+  scope :long_expired, where("updated_at < '#{9.months.ago}'")
 end
