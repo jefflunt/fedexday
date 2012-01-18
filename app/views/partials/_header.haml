@@ -1,7 +1,11 @@
-.title-image
+#title-image
   =link_to (image_tag 'title-logo.png'), :root
-.title-text
-  %span{:class=>'title-head'}=link_to "NUBIC FedEx Day idea box", :root
+#title-text
+  %span{:id=>'title-head'}=link_to "NUBIC FedEx Day idea box", :root
   %br
-  %span{:class=>'title-subhead'}=link_to "Submit an idea. Get feedback.", :root
+  %span{:id=>'title-subhead'}=link_to "Submit an idea. Get feedback.", :root
+  %br
+#title-countdown
+  %b="FedEx day"
+  March 15, 2012
 %br
