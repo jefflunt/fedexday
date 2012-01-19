@@ -24,7 +24,8 @@ Installation
 1. Clone the repository
 2. Install bundler, if you haven't already
 3. Run `bundle install`
-4. Setup the web server of your choice
+4. Migrate your database
+5. Setup the web server of your choice
 
 Usage notes, and auto-destroy thresholds
 ========================================
