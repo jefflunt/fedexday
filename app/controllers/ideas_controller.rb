@@ -2,12 +2,12 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.order("updated_at desc")
-    
+    @ideas = Idea.order("scratched asc, updated_at desc")
+
     Idea.long_expired.each do |i|
       i.destroy
     end
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @ideas }
