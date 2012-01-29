@@ -25,7 +25,8 @@ Installation
 2. Install bundler, if you haven't already
 3. Run `bundle install`
 4. Migrate your database
-5. Setup the web server of your choice
+5. Run `guard` to run the entire test suite, making sure they all pass
+6. Setup the web server of your choice
 
 Usage notes, and auto-destroy thresholds
 ========================================
