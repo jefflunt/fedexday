@@ -24,9 +24,10 @@ Installation
 1. Clone the repository
 2. Install bundler, if you haven't already
 3. Run `bundle install`
-4. Migrate your database
+4. Migrate your `production` database via `rake db:migrate RAILS_ENV=production`. For development (and testing), also migrate the `test` and `cucumber` databases, with matching `RAILS_ENV` parameters
 5. Run `guard` to run the entire test suite, making sure they all pass
-6. Setup the web server of your choice
+6. When the test suite finishes, and you're presented with a prompt, type `exit` or `quit`
+7. Setup the web server of your choice, and go to town!
 
 Usage notes, and auto-destroy thresholds
 ========================================
