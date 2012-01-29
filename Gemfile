@@ -31,4 +31,5 @@ group :development, :test, :cucumber do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'launchy'
 end
