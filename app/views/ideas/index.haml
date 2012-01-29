@@ -11,15 +11,15 @@
       %th{:class=>'column-string', :width=>"15%"}="Last activity"
     - @ideas.each do |idea|
       %tr
-        %td=link_to "X", scratch_idea_path(idea), :method => :put
+        %td=link_to "X", scratch_idea_path(idea), :method => :put, :class => 'idea-scratch'
         %td{:style=>"text-align: center"}
           %b
             =idea.endorsements.count
         %td{:style=>"text-align: left"}
           - if idea.scratched
-            %strike=link_to idea.title, idea
+            %strike=link_to idea.title, idea, :class => 'idea-index-link'
           -else
-            =link_to idea.title, idea
+            =link_to idea.title, idea, :class => 'idea-index-link'
         %td{:style=>"text-align: center"}
           %b
             =idea.comments.count

@@ -10,3 +10,7 @@ Then /^there should be (\d+) Ideas? scratched out$/ do |scratched_ideas_total|
   Idea.where(:scratched => true).count.should == scratched_ideas_total.to_i
 end
 
+When /^I scratch out "([^"]*)"$/ do |idea_title|
+  idea = Idea.find_by_title(idea_title)
+  idea.update_attribute(:scratched, true)
+end

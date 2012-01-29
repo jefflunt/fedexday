@@ -27,6 +27,12 @@ Then /^I should see all of:$/ do |list_of_texts_to_see|
   end
 end
 
+Then /^I should see links with class "([^"]*)" in this order:$/ do |link_class, table|
+  expected_order = table.rows.flatten
+  actual_order = page.all("a.#{link_class}").collect(&:text)
+  actual_order.should == expected_order
+end
+
 When /^(?:|I )follow "([^\"]*)"$/ do |link|
   click_link(link)
 end

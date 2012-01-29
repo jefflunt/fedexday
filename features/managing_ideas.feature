@@ -48,5 +48,20 @@ Feature: Idea lists, editing, updating, and scratching
   Scenario: I can scratch out an idea
     When I go to the Ideas index page
     Then there should be 0 Ideas scratched out
-    When I follow "X"
+    When I scratch out "A new idea"
     Then there should be 1 Idea scratched out
+    
+  Scenario: Scratched out Ideas appear last
+    When I go to the Ideas index page
+    Then I should see links with class "idea-index-link" in this order:
+      | link text                 |
+      | The absolute newest idea  |
+      | An even newer idea        |
+      | A new idea                |
+    When I scratch out "An even newer idea"
+    And I go to the Ideas index page
+    Then I should see links with class "idea-index-link" in this order:
+      | link text                 |
+      | The absolute newest idea  |
+      | A new idea                |
+      | An even newer idea        |
