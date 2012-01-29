@@ -74,6 +74,6 @@ class IdeasController < ApplicationController
     @idea = Idea.find(params[:id])
     
     @idea.update_attribute(:scratched, !@idea.scratched)
-    redirect_to :back
+    redirect_back_or ideas_path
   end
 end

@@ -62,7 +62,6 @@ describe IdeasController do
   
   it "should allow you to scratch an idea" do
     lambda {
-      request.env["HTTP_REFERER"] = ideas_path
       put :scratch, :id => @some_idea.id
       @some_idea.reload
     }.should change(@some_idea, :scratched)
