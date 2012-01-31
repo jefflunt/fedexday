@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the capistrano config file (this must be user-supplied)
+/config/cap_config.yml
