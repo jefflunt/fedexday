@@ -1,4 +1,4 @@
-CAPIFY = YAML::load( File.open( '/etc/fedexday/cap_config.yml' ) )
+CAPIFY = YAML::load( File.open( './config/cap_config.yml' ) )
 
 set :application, CAPIFY['app_name']
 set :repository,  CAPIFY['repo']
