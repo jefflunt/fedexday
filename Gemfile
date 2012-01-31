@@ -6,6 +6,7 @@ gem 'json'
 gem 'jquery-rails'
 gem 'haml'
 gem 'therubyracer'
+gem 'capistrano'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'
