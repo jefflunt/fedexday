@@ -1,9 +1,11 @@
 CAPIFY = YAML::load( File.open( './config/cap_config.yml' ) )
 
 set :application, CAPIFY['app_name']
-set :repository,  CAPIFY['repo']
 
 set :scm, :git
+set :repository,  CAPIFY['repo']
+set :branch, "master"
+
 set :user, CAPIFY['remote_deploy_user']
 set :user_sudo, false
 set :deploy_to, CAPIFY['remote_deploy_path']
