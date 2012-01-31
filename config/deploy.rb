@@ -32,6 +32,7 @@ namespace :deploy do
   desc "Makes a copy of the SQLite database"
   task :backup_db do
     stop
+    run "cp #{current_path}/db/staging.sqlite ~/stg-backup-#{Date.today.to_s}.#{Time.now.to_i}.sqlite"
     run "cp #{current_path}/db/production.sqlite ~/prod-backup-#{Date.today.to_s}.#{Time.now.to_i}.sqlite"
     start
   end
