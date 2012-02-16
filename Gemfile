@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'therubyracer'
 gem 'capistrano'
+gem 'rails_autolink'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5'

@@ -134,6 +134,8 @@ GEM
       activesupport (= 3.1.3)
       bundler (~> 1.0)
       railties (= 3.1.3)
+    rails_autolink (1.0.5)
+      rails (~> 3.1)
     railties (3.1.3)
       actionpack (= 3.1.3)
       activesupport (= 3.1.3)
@@ -221,6 +223,7 @@ DEPENDENCIES
   launchy
   populator
   rails (= 3.1.3)
+  rails_autolink
   rspec-rails
   ruby-debug
   ruby_gntp (~> 0.3.4)
