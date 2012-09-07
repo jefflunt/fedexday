@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails'
 gem 'sqlite3'
 gem 'json'
 gem 'jquery-rails'
@@ -10,13 +10,13 @@ gem 'capistrano'
 gem 'rails_autolink'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :development, :test, :cucumber do
-  gem 'ruby-debug'
+  gem 'ruby-debug19'
   gem 'populator'
   gem 'factory_girl_rails'
   gem 'faker'

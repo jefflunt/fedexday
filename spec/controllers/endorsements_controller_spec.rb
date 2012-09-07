@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe EndorsementsController do
   before(:all) do
-    @central_idea = Factory.create(:idea)
+    @central_idea = FactoryGirl.create(:idea)
   end
   
   before (:each) do
-    @fresh_endorsement = Factory.create(:endorsement, :idea_id => @central_idea.id)
+    @fresh_endorsement = FactoryGirl.create(:endorsement, :idea_id => @central_idea.id)
   end
 
   it "should accept valid endorsements" do

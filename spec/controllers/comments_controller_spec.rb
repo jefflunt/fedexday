@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CommentsController do
   before(:all) do
-    @central_idea = Factory.create(:idea)
+    @central_idea = FactoryGirl.create(:idea)
   end
 
   it "should accept valid comments" do

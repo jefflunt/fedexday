@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe IdeasController do
   before(:each) do
-    @some_idea = Factory.create(:idea)
+    @some_idea = FactoryGirl.create(:idea)
   end
 
   it "should allow access to the index action" do

@@ -2,7 +2,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 
 Given /^these Ideas:$/ do |table|
   table.rows.each do |column_data|
-    Factory.create(:idea, :title => column_data[0], :body => column_data[1])
+    FactoryGirl.create(:idea, :title => column_data[0], :body => column_data[1])
   end
 end
 

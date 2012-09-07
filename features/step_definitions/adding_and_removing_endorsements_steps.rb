@@ -3,7 +3,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 Given /^these Endorsements on "([^"]*)":$/ do |idea_title, table|
   idea = Idea.find_by_title(idea_title)
   table.rows.each do |column_data|
-    Factory.create(:endorsement, :name => column_data[0], :idea_id => idea.id)
+    FactoryGirl.create(:endorsement, :name => column_data[0], :idea_id => idea.id)
   end
 end
 
