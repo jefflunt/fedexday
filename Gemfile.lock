@@ -215,6 +215,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   database_cleaner
+  execjs
   factory_girl_rails
   faker
   guard
