@@ -17,7 +17,7 @@ group :assets do
 end
 
 group :development, :test, :cucumber do
-  gem 'ruby-debug19'
+  #gem 'ruby-debug19'
   gem 'populator'
   gem 'factory_girl_rails'
   gem 'faker'
